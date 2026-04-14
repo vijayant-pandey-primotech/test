@@ -1,0 +1,62 @@
+📦Rejara-AI-v2-dev
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┗ 📜main.yml
+ ┣ 📂scripts
+ ┃ ┣ 📜debug_conversation_history.py
+ ┃ ┗ 📜fetch_redis_data.py
+ ┣ 📂src
+ ┃ ┣ 📂config
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜google_db.py
+ ┃ ┃ ┗ 📜sql_db.py
+ ┃ ┣ 📂controller
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜cbot_controller.py
+ ┃ ┃ ┗ 📜story_controller.py
+ ┃ ┣ 📂core
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜cluster_handler.py
+ ┃ ┃ ┣ 📜handlers.py
+ ┃ ┃ ┣ 📜models.py
+ ┃ ┃ ┣ 📜personal_handler.py
+ ┃ ┃ ┣ 📜services.py
+ ┃ ┃ ┗ 📜utils.py
+ ┃ ┣ 📂middleware
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜function_logger.py
+ ┃ ┃ ┗ 📜logger.py
+ ┃ ┣ 📂router
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜router_helper.py
+ ┃ ┃ ┗ 📜routes.py
+ ┃ ┣ 📂scripts
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜torch_migration.py
+ ┃ ┃ ┗ 📜torch_migration_source_script.py
+ ┃ ┣ 📂services
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜assistant_context_service.py
+ ┃ ┃ ┣ 📜google_service.py
+ ┃ ┃ ┣ 📜question_personalization_service.py
+ ┃ ┃ ┗ 📜redis_service.py
+ ┃ ┣ 📂source
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┗ 📜cbot_controller.py
+ ┃ ┣ 📂utils
+ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┣ 📜api_helper.py
+ ┃ ┃ ┗ 📜prompt_functions.py
+ ┃ ┣ 📜README.md
+ ┃ ┣ 📜REFACTOR_ANALYSIS.md
+ ┃ ┗ 📜__init__.py
+ ┣ 📜.DS_Store
+ ┣ 📜.gitignore
+ ┣ 📜.env
+ ┣ 📜Dockerfile
+ ┣ 📜README.md
+ ┣ 📜app.py
+ ┣ 📜docker-compose.yml
+ ┣ 📜env.example.txt
+ ┣ 📜requirements.txt
+ ┗ 📜service_key.json

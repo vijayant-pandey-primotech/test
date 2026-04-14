@@ -1,0 +1,53 @@
+# JSON configuration and service keys
+question.json
+service_key.json
+
+# Environment files
+*.env
+notebooks/.env
+notebooks/service_key.json
+
+# Virtual Environment
+rejaravenv/
+venv/
+env/
+.venv/
+# IDE/Editor Files
+.vscode/
+.idea/ 
+.vs/
+
+# Compiled Files or Directories
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+
+# Dependency Files
+*.egg-info/
+dist/
+build/
+
+# # Log Files
+# *.log
+# logs/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Pycache Google Helper
+__pycache__/google_helper.cpython-310.pyc
+__pycache__
+
+# Pycache inside the every folder
+src/config/__pycache__
+src/controller/__pycache__
+src/middleware/__pycache__
+src/router/__pycache__
+src/services/__pycache__
+src/utils/__pycache__
+src/scripts/__pycache__
+
+/source

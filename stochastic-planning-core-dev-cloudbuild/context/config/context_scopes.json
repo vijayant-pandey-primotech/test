@@ -1,0 +1,3055 @@
+{
+  "domains": [
+    "Finance",
+    "Caregiving",
+    "Health",
+    "Legal",
+    "Housing",
+    "Digital",
+    "Pets",
+    "Support Network",
+    "Insurance",
+    "Profile",
+    "Community"
+  ],
+  "context_scopes": [
+    {
+      "scope_name": "Additional Recurring Income",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Recurring Auto Income": {
+          "itemId": 32,
+          "entity": "Autos",
+          "attributes": [
+            "Recurring Income"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 3
+        },
+        "Recurring Pet Income": {
+          "itemId": 7,
+          "entity": "Pets",
+          "attributes": [
+            "Recurring Income"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 1
+        },
+        "Recurring Real Estate Income": {
+          "itemId": 22,
+          "entity": "Real Estate",
+          "attributes": [
+            "Recurring Income",
+            "Direct_Deposit"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Aging",
+      "domains": [
+        "Caregiving",
+        "Health"
+      ],
+      "signals": {
+        "Has Medical Alert Device": {
+          "itemId": 2577,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Alert / Athletic Safety Device"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Daily Feeding Instructions": {
+          "itemId": 2578,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Daily Feeding & Care Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Special Care Instructions": {
+          "itemId": 2579,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Special Care Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Temporary Care Instructions": {
+          "itemId": 2574,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Temporary Care Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Permanent Care Instructions": {
+          "itemId": 2575,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Permanent Care Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Boarding Facility Used": {
+          "itemId": 2576,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Boarding Facility"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Assets",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Has Frequent Flyer Rewards": {
+          "itemId": 2586,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Frequent Flyer Rewards"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Number of Bank Accounts": {
+          "itemId": 2587,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Bank Accounts"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "count",
+          "storyId": 80
+        },
+        "Has Timeshares": {
+          "itemId": 2585,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Timeshares"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Business Equity": {
+          "itemId": 2584,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Business Owner's Equity"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Investment Accounts": {
+          "itemId": 2581,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Brokerage/Investment Accounts"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Retirement Accounts": {
+          "itemId": 2582,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Retirement Accounts"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Stock/Bond Certificates": {
+          "itemId": 2583,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Stock/Bond Certificates"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Assisted Daily Living",
+      "domains": [
+        "Caregiving",
+        "Health"
+      ],
+      "signals": {
+        "Needs Dressing Assistance": {
+          "itemId": 2700,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dressing",
+            "Use_dress_devices",
+            "Lower_body_dress",
+            "Upper_body_dress"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Needs Bathing Assistance": {
+          "itemId": 2689,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Bathing and Showering",
+            "Back_washing_help",
+            "Bathe_Independenlty"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Needs Meal Preparation Assistance": {
+          "itemId": 2693,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Meal Preparation",
+            "Prepare_meals",
+            "Appliance_usage"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Needs Eating Assistance": {
+          "itemId": 2690,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Eating",
+            "Food_cutting_help",
+            "Chewing_swallowing"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Needs Toileting Assistance": {
+          "itemId": 2701,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Toileting",
+            "Self_clean",
+            "manage_incontinence_products"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Mobility Assistance Required": {
+          "itemId": 2702,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Transferring",
+            "Mobility_assist",
+            "Chair_transfer",
+            "Bed_transfer"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Needs Medication Management": {
+          "itemId": 2692,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Managing Medications",
+            "Refill_prescriptions",
+            "Open_pill_bottles"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Continence Issues": {
+          "itemId": 2691,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Continence",
+            "Incontience_supply_usage",
+            "Bowel_control",
+            "Bladder_control"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Auto Expenses",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Has Auto Financing": {
+          "itemId": 89,
+          "entity": "Autos",
+          "attributes": [
+            "Financing Details",
+            "Instructions",
+            "Auto_pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Recurring Auto Expenses": {
+          "itemId": 33,
+          "entity": "Autos",
+          "attributes": [
+            "Recurring Expenses",
+            "Recent_credit_report_location"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 3
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Care Providers",
+      "domains": [
+        "Health",
+        "Caregiving"
+      ],
+      "signals": {
+        "Number of Medical Providers": {
+          "itemId": 2687,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Provider 1",
+            "specialty",
+            "contact_info",
+            "found_existing",
+            "add_more"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "count",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Child & Dependent-Related Expenses",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Has Child Support Obligation": {
+          "itemId": 2617,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Child Support"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has School/Daycare Expenses": {
+          "itemId": 2618,
+          "entity": "Care Receivers",
+          "attributes": [
+            "School/Daycare Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Cloud Storage & Digital File Locations",
+      "domains": [
+        "Digital"
+      ],
+      "signals": {
+        "Has Google Drive": {
+          "itemId": 2623,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Google Drive Photos"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has iCloud": {
+          "itemId": 2624,
+          "entity": "Care Receivers",
+          "attributes": [
+            "iCloud"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Dropbox/OneDrive": {
+          "itemId": 2625,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dropbox OneDrive"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Apple iCloud Storage Plan": {
+          "itemId": 2640,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Apple iCloud Storage Plan"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Digital Document Copies": {
+          "itemId": 2647,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Digital Document Copies"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Digital Identity & Security",
+      "domains": [
+        "Digital"
+      ],
+      "signals": {
+        "Has Secondary Email": {
+          "itemId": 2650,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Secondary Email"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Authenticator App": {
+          "itemId": 2653,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Authenticator Apps"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Device Unlock Method on File": {
+          "itemId": 2652,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Device Unlock Method"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Digital Assets": {
+          "itemId": 2622,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Digital Assets"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Digital Asset Instructions": {
+          "itemId": 2646,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Digital Asset Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Primary Email on File": {
+          "itemId": 2649,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Primary Email"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Digital Legacy & End-of-Life Accounts",
+      "domains": [
+        "Digital",
+        "Legal"
+      ],
+      "signals": {
+        "Has Accounts to Memorialize": {
+          "itemId": 2645,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Accounts to Memorialize"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Accounts to Delete": {
+          "itemId": 2644,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Accounts to Delete"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Digital Photo Beneficiary Named": {
+          "itemId": 2643,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Who Receives Digital Photos"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Digital Estate Plan": {
+          "itemId": 2642,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Digital Estate Plan"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Music Platform Accounts": {
+          "itemId": 2641,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Music Platforms"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Digital Transaction Accounts",
+      "domains": [
+        "Digital",
+        "Finance"
+      ],
+      "signals": {
+        "Has Food Delivery Account": {
+          "itemId": 2639,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Food Delivery"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has PayPal": {
+          "itemId": 2635,
+          "entity": "Care Receivers",
+          "attributes": [
+            "PayPal"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Etsy/Shopify Account": {
+          "itemId": 2636,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Etsy Shopify"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Stripe Account": {
+          "itemId": 2637,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Stripe Account"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Amazon Account": {
+          "itemId": 2638,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Amazon Account"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Everyday Practical Items",
+      "domains": [
+        "Caregiving"
+      ],
+      "signals": {
+        "Has Hearing Aids": {
+          "itemId": 2656,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Hearing Aids"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Purse/Bag Documented": {
+          "itemId": 2684,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Purse / Bag"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Tools & Equipment": {
+          "itemId": 2671,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Tools & Equipment"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Other Important Property Information": {
+          "itemId": 25,
+          "entity": "Real Estate",
+          "attributes": [
+            "Other Important Information"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Security Codes on File": {
+          "itemId": 146,
+          "entity": "Real Estate",
+          "attributes": [
+            "Security Codes",
+            "Advocates_have_codes"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Financial & Tax Documents",
+      "domains": [
+        "Finance",
+        "Legal"
+      ],
+      "signals": {
+        "Has Recent Credit Report": {
+          "itemId": 2493,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Recent Credit Report",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Tax Returns on File": {
+          "itemId": 2506,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Tax Returns",
+            "Recent_tax_returns_location",
+            "Prior_year_tax_returns_location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Password Inventory Up to Date": {
+          "itemId": 2509,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Password Inventory",
+            "Up_to_date",
+            "Password_Inventory_Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Financial, Legal, & Estate Contacts",
+      "domains": [
+        "Finance",
+        "Legal"
+      ],
+      "signals": {
+        "Has Accountant on File": {
+          "itemId": 2525,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Accountant"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Estate Planning Attorney on File": {
+          "itemId": 2530,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Estate Planning Attorney"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Financial Advisor on File": {
+          "itemId": 2532,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Financial Advisor"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Trustee on File": {
+          "itemId": 2536,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Trustee"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Executor of Estate on File": {
+          "itemId": 2537,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Executor of Estate"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Insurance Agent on File": {
+          "itemId": 2538,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Insurance Agents"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Social Security Representative on File": {
+          "itemId": 2539,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Social Security Office / Representative Payee"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Banker on File": {
+          "itemId": 2526,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Banker"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Healthcare & Medical Care Expenses",
+      "domains": [
+        "Health",
+        "Finance"
+      ],
+      "signals": {
+        "Monthly Incontinence Supply Expenses": {
+          "itemId": 2607,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Incontinence Supplies",
+            "Incontinence_Supplies_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Has Medical Debt": {
+          "itemId": 2609,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Debt",
+            "Medical_Debt_Payments"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Monthly Medical Alert System Expenses": {
+          "itemId": 2610,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Alert System",
+            "Medical_Alert_System_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Medication Expenses": {
+          "itemId": 2591,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medications",
+            "Medication_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Has Co-Pay Expenses": {
+          "itemId": 2592,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Co-Pays"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Monthly Specialist Co-Pay Expenses": {
+          "itemId": 2593,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Specialist Visits",
+            "Co_Pays"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Medical Equipment Expenses": {
+          "itemId": 2594,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Equipment",
+            "Medical_Equipment_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Has Home Health Aide Expense": {
+          "itemId": 2595,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Home Health Aides",
+            "Home_Health_Aides_Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Monthly Therapy Expenses": {
+          "itemId": 2596,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Therapies",
+            "Therapies_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Paratransit Expenses": {
+          "itemId": 2598,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Paratransit Services",
+            "Paratransit_Services_Expensesa"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Hygiene Supply Expenses": {
+          "itemId": 2605,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Hygiene Supplies",
+            "Hygiene_Supplies_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "High-Value Physical Assets",
+      "domains": [
+        "Finance",
+        "Legal"
+      ],
+      "signals": {
+        "Has Firearms": {
+          "itemId": 2668,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Firearms"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Collectibles": {
+          "itemId": 2664,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Collectibles"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Valuables in Storage/Consignment": {
+          "itemId": 2681,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Valuables in Storage/Consignment"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Special Furniture Pieces": {
+          "itemId": 2669,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Special Furniture Pieces"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Jewelry Collection": {
+          "itemId": 2663,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Jewelry Collection"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has High-Value Electronics": {
+          "itemId": 2667,
+          "entity": "Care Receivers",
+          "attributes": [
+            "High-Value Electronics"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Antiques": {
+          "itemId": 2666,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Antiques"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Art/Paintings": {
+          "itemId": 2665,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Art / Paintings"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Home & Property Service Providers",
+      "domains": [
+        "Housing"
+      ],
+      "signals": {
+        "Has Mechanic/Dealership on File": {
+          "itemId": 90,
+          "entity": "Autos",
+          "attributes": [
+            "Mechanic/Dealership",
+            "Phone",
+            "Name"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has Lawn Service on File": {
+          "itemId": 82,
+          "entity": "Real Estate",
+          "attributes": [
+            "Lawn Service",
+            "Phone",
+            "Name",
+            "Auto_pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Handyman on File": {
+          "itemId": 81,
+          "entity": "Real Estate",
+          "attributes": [
+            "Handyman",
+            "Phone",
+            "Name"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Pool Service on File": {
+          "itemId": 80,
+          "entity": "Real Estate",
+          "attributes": [
+            "Pool Service",
+            "Phone",
+            "Name"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Other Service Providers on File": {
+          "itemId": 24,
+          "entity": "Real Estate",
+          "attributes": [
+            "Service Providers"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Cleaning Service on File": {
+          "itemId": 84,
+          "entity": "Real Estate",
+          "attributes": [
+            "Cleaning Service",
+            "Phone",
+            "Name"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Heating & Cooling Service on File": {
+          "itemId": 83,
+          "entity": "Real Estate",
+          "attributes": [
+            "Heating & Cooling Service",
+            "Phone",
+            "Name"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Household & Daily Living",
+      "domains": [
+        "Caregiving",
+        "Health"
+      ],
+      "signals": {
+        "Safety and Emergency Awareness": {
+          "itemId": 2699,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Safety and Emergency Awareness",
+            "Identify_hazards",
+            "Respond_emergencies",
+            "Lock_doors"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Can Manage Digital Communication": {
+          "itemId": 2698,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Communication and Technology Use",
+            "Manage_digital_appointments",
+            "Use_email",
+            "Use_phone"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Can Use Transportation Independently": {
+          "itemId": 2695,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Using Transportation",
+            "Schedule_appointment",
+            "Drive_safely",
+            "Public_transit_usage"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Can Manage Finances Independently": {
+          "itemId": 2694,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Managing Finances",
+            "Aovid_scam_detection",
+            "Banking"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Can Manage Housekeeping": {
+          "itemId": 2697,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Housekeeping and Home Maintenance",
+            "Home_repairs",
+            "Clean_kitchen_bathroom",
+            "Do_laundry"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Can Shop Independently": {
+          "itemId": 2696,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Shopping",
+            "Go_shopping",
+            "Carry_groceries"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Household & Essential Living Expenses",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Monthly Streaming Services Expenses": {
+          "itemId": 2613,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Streaming Services",
+            "Streaming_Services_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Cable/Satellite Expenses": {
+          "itemId": 2616,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Cable/Satellite Television",
+            "Monthly_Cable_Sat_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Has Critical Household Bills": {
+          "itemId": 2588,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Critical Household Bills"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Personal Phone Expenses": {
+          "itemId": 2590,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Personal Phone Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Monthly Grocery Expenses": {
+          "itemId": 2601,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Groceries",
+            "Groceries_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Meal Delivery Expenses": {
+          "itemId": 2602,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Meal Delivery Services",
+            "Meal_Delivery_Services_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Laundry Service Expenses": {
+          "itemId": 2606,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Laundry Services",
+            "Laundry_Services_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Identity & Vital Records",
+      "domains": [
+        "Legal"
+      ],
+      "signals": {
+        "Has Address Book": {
+          "itemId": 2495,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Address Book Entries",
+            "Location_of_address_book"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Birth Certificate on File": {
+          "itemId": 2494,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Birth Certificate",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Alternate Citizenship": {
+          "itemId": 2507,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Alternate Citizenship",
+            "Countries",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Divorce/Separation Papers on File": {
+          "itemId": 2512,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Divorce/Separation Papers",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Passport on File": {
+          "itemId": 2492,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Passport/Citizenship Papers",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Social Security Card on File": {
+          "itemId": 2491,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Social Security Card",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Military Papers on File": {
+          "itemId": 2508,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Military Papers",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Marriage/Civil Union Papers on File": {
+          "itemId": 2510,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Marriage/Civil Union Papers",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Name Change Documentation": {
+          "itemId": 2503,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Name Change Documentation"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Driver's License/State ID on File": {
+          "itemId": 2502,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Driver's License / State ID"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Other Important Documents": {
+          "itemId": 2490,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Other Important Documents",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Pet Ownership Papers": {
+          "itemId": 91,
+          "entity": "Pets",
+          "attributes": [
+            "Ownership Papers",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Income",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Primary Personal Income": {
+          "itemId": 2556,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Primary Personal Income",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Annuity Payment Income": {
+          "itemId": 2557,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Annuity Payments"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Long-Term Care Insurance Payout Income": {
+          "itemId": 2558,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Long-Term Care Insurance Payouts",
+            "Amount_frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "VA Income": {
+          "itemId": 2559,
+          "entity": "Care Receivers",
+          "attributes": [
+            "VA Income",
+            "Amount_Details"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "SNAP Food Assistance Income": {
+          "itemId": 2560,
+          "entity": "Care Receivers",
+          "attributes": [
+            "SNAP Food Assistance",
+            "Amount_frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "State/Local Income Assistance": {
+          "itemId": 2561,
+          "entity": "Care Receivers",
+          "attributes": [
+            "State Local Income Assistance",
+            "Amount_frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Special Needs Trust Distribution Income": {
+          "itemId": 2562,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Special Needs Trust Distributions",
+            "Amount_Details"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Settlement/Legal Award Income": {
+          "itemId": 2563,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Settlements or Legal Awards",
+            "Amount_Details"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Life Insurance Payout Income": {
+          "itemId": 2564,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Life Insurance Payouts",
+            "Amount_frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Family Financial Help Income": {
+          "itemId": 2565,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Financial Help from Family",
+            "Amount_Details"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Other Income": {
+          "itemId": 2566,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Other Income",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Pension Income": {
+          "itemId": 2567,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Pension Checks",
+            "Income_and_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Government Benefits Income": {
+          "itemId": 2568,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Government Benefits",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "CD Account Income": {
+          "itemId": 2569,
+          "entity": "Care Receivers",
+          "attributes": [
+            "CD Accounts",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Royalty Income": {
+          "itemId": 2570,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Royalty Checks",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Trust/IRA Distribution Income": {
+          "itemId": 2571,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Trust/IRA Distributions",
+            "IRA_Distribution_Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Deferred Compensation Income": {
+          "itemId": 2572,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Deferred Compensation Accounts",
+            "Amount_Frequency"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Dividend Income": {
+          "itemId": 2573,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dividends",
+            "Amount_Details"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Income-Related Obligations",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Has Personal Loans": {
+          "itemId": 2608,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Loans",
+            "Personal_Loans_Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Alimony/Separation Support Obligation": {
+          "itemId": 2619,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Alimony/Separation Support"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Student Loans": {
+          "itemId": 2620,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Student Loans"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Credit Cards": {
+          "itemId": 2615,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Credit Cards"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Insurance & Risk Protection",
+      "domains": [
+        "Finance",
+        "Insurance"
+      ],
+      "signals": {
+        "Has Auto Insurance": {
+          "itemId": 31,
+          "entity": "Autos",
+          "attributes": [
+            "Insurance"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has AD&D Insurance": {
+          "itemId": 2520,
+          "entity": "Care Receivers",
+          "attributes": [
+            "AD&D Insurance",
+            "Details",
+            "Location",
+            "Premium_Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Hospital Indemnity Plan": {
+          "itemId": 2524,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Hospital Indemnity Plan"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Critical Illness Coverage": {
+          "itemId": 2523,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Critical Illness Coverage"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Long-Term Care Insurance": {
+          "itemId": 2522,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Long-Term Care Insurance",
+            "Location",
+            "Premium_Expenses",
+            "Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Umbrella Liability Insurance": {
+          "itemId": 2521,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Umbrella Liability Insurance",
+            "Location",
+            "Premium_Expenses",
+            "Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Health Insurance": {
+          "itemId": 2514,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Health Insurance",
+            "Details",
+            "Premium_Expenses",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Accidental Injury Coverage": {
+          "itemId": 2515,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Accidental Injury Coverage"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Hearing Aid Coverage": {
+          "itemId": 2516,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Hearing Aid Coverage Limits"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Dental Insurance": {
+          "itemId": 2517,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dental Insurance",
+            "Details",
+            "Premium_Expenses",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Life Insurance": {
+          "itemId": 2519,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Life Insurance",
+            "Premium_Expenses",
+            "Location",
+            "Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Vision Insurance": {
+          "itemId": 2518,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Vision Insurance",
+            "Details",
+            "Location",
+            "Premium_Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Valuable Items Insurance": {
+          "itemId": 77,
+          "entity": "Real Estate",
+          "attributes": [
+            "Valuable Items Insurance",
+            "Number_of_policies",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Homeowner/Renter Insurance": {
+          "itemId": 79,
+          "entity": "Real Estate",
+          "attributes": [
+            "Homeowner/Renter Insurance",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Real Estate Insurance": {
+          "itemId": 20,
+          "entity": "Real Estate",
+          "attributes": [
+            "Insurance"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Legacy",
+      "domains": [
+        "Legal"
+      ],
+      "signals": {
+        "Has Organ Donation Directive": {
+          "itemId": 2551,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Organ Donation"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Final Wishes Documented": {
+          "itemId": 2549,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Final Wishes"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Funeral Preferences Documented": {
+          "itemId": 2550,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Funeral Preferences"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Prepaid Funeral Arrangements": {
+          "itemId": 2552,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Prepaid Funeral Arrangements"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Charity Designations": {
+          "itemId": 2553,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Charity",
+            "Charity_Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Legacy Letters/Messages": {
+          "itemId": 2554,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Legacy Letters/Messages",
+            "Legacy_Letters_Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Trusts": {
+          "itemId": 2555,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Trusts",
+            "Trust_Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Legal & Estate Planning Documents",
+      "domains": [
+        "Legal",
+        "Finance"
+      ],
+      "signals": {
+        "Has Will": {
+          "itemId": 2496,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Will",
+            "Executor_name",
+            "Instructions_up_to_date",
+            "Number_of_amendments",
+            "Attorney_reviewed",
+            "Executors_up_to_date",
+            "Location_of_original",
+            "Alternate_Executor_Name",
+            "Signed_&_witnessed"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Financial POA Signed": {
+          "itemId": 2497,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Financial Power of Attorney",
+            "Location_of_original",
+            "People_named_are_up_to_date",
+            "Attorney_reviewed",
+            "Bank_or_Advisor_has_copy",
+            "Primary_person_name_contact",
+            "Alternate_person_phone",
+            "Signed_&_witnessed"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Auto Special Instructions": {
+          "itemId": 87,
+          "entity": "Autos",
+          "attributes": [
+            "Special Instructions",
+            "Location",
+            "Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has Estate Planning Documents": {
+          "sources": [
+            {
+              "itemId": 2489,
+              "entity": "Care Receivers",
+              "attributes": [
+                "Estate Planning",
+                "Estate_Plan_Details",
+                "Location"
+              ],
+              "storyId": 80
+            },
+            {
+              "itemId": 4,
+              "entity": "Pets",
+              "attributes": [
+                "Estate Planning",
+                "Up_to_date",
+                "Location"
+              ],
+              "storyId": 1
+            },
+            {
+              "itemId": 19,
+              "entity": "Real Estate",
+              "attributes": [
+                "Important Documents",
+                "Location"
+              ],
+              "storyId": 2
+            }
+          ],
+          "dependencyScope": "multi_source"
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Legally Relevant / Estate-Linked Items",
+      "domains": [
+        "Legal"
+      ],
+      "signals": {
+        "Has Waterproof/Fireproof Storage": {
+          "itemId": 2680,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Waterproof/Fireproof Storage"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Burial Plot Deed": {
+          "itemId": 2677,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Burial Plot Deed (Physical)"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Prepaid Funeral Items": {
+          "itemId": 2676,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Prepaid Funeral Items (Physical)"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Home Inventory": {
+          "itemId": 2654,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Home Inventory"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Safe Deposit Box": {
+          "itemId": 2683,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Safe Deposit Box"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Offsite Storage Unit": {
+          "itemId": 2682,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Offsite Storage Units"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Medical & Health Care Contacts",
+      "domains": [
+        "Health"
+      ],
+      "signals": {
+        "Has Dentist on File": {
+          "itemId": 2528,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dentist"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Eye Doctor on File": {
+          "itemId": 2531,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Eye Doctor"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has VA Benefits Officer on File": {
+          "itemId": 2540,
+          "entity": "Care Receivers",
+          "attributes": [
+            "VA Benefits Officer"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Fire Department Contact on File": {
+          "itemId": 2535,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Fire Department Non-Emergency Line"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Police Non-Emergency Contact on File": {
+          "itemId": 2534,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Police Non-Emergency Line"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Emergency Contacts on File": {
+          "itemId": 2529,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Emergency Contacts"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Pharmacy on File": {
+          "itemId": 2543,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Pharmacy"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Primary Care Doctor on File": {
+          "itemId": 2544,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Primary Care Doctor"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Medical & Health Care Documents",
+      "domains": [
+        "Health",
+        "Legal"
+      ],
+      "signals": {
+        "HIPAA Release On File": {
+          "itemId": 2511,
+          "entity": "Care Receivers",
+          "attributes": [
+            "HIPAA Release",
+            "Up_to_date",
+            "HIPAA_Release_Details",
+            "Attorney_reviewed",
+            "Doctor_has_copy",
+            "Advocates_have_copy"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Healthcare Accounts": {
+          "itemId": 2498,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Healthcare Accounts",
+            "Location_of_statement",
+            "Trust_Named",
+            "Beneficiaries_up_to_date",
+            "Number_of_accounts"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Living Will Signed": {
+          "itemId": 2513,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Living Will",
+            "Will_Details",
+            "Up_to_date",
+            "Location_of_original",
+            "Attorney_reviewed",
+            "Doctor_has_copy",
+            "Advocates_have_copy",
+            "Signed_and_witnessed",
+            "Details_of_living Will"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Healthcare Power of Attorney": {
+          "itemId": 2499,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Healthcare Power of Attorney (Medical POA)"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has DNR/DNI": {
+          "itemId": 2500,
+          "entity": "Care Receivers",
+          "attributes": [
+            "DNR / DNI"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has POLST/MOLST": {
+          "itemId": 2501,
+          "entity": "Care Receivers",
+          "attributes": [
+            "POLST / MOLST"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Care Plans from Providers": {
+          "itemId": 2505,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Care Plans from Providers"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Medical Records",
+      "domains": [
+        "Health"
+      ],
+      "signals": {
+        "Number of Medical Records": {
+          "itemId": 2688,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medical Record Type 1",
+            "Add_More",
+            "check_updated_existing_item",
+            "Diagnosis",
+            "Symptoms",
+            "Medications_Prescribed"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "count",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Medication",
+      "domains": [
+        "Health"
+      ],
+      "signals": {
+        "Number of Active Medications": {
+          "itemId": 2686,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Medication Name 1",
+            "Add_More",
+            "check_updated_existing_item",
+            "Prescribed_by",
+            "Dosage"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "count",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Personal Care and Lifestyle",
+      "domains": [
+        "Finance"
+      ],
+      "signals": {
+        "Has Recurring Personal Expenses": {
+          "itemId": 2589,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Recurring Expenses",
+            "Recurring_Expense_Details"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Other Personal Expenses": {
+          "itemId": 2614,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Other Personal Expenses"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Club Membership Fees": {
+          "itemId": 2621,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Club Membership Fees"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Monthly Hobby Expenses": {
+          "itemId": 2612,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Hobbies",
+            "Hobbies_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly App Subscription Expenses": {
+          "itemId": 2611,
+          "entity": "Care Receivers",
+          "attributes": [
+            "App Subscriptions",
+            "App_Subscriptions_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Grooming Expenses": {
+          "itemId": 2604,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Haircuts/Grooming",
+            "Haircuts_Grooming_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Dining Out Expenses": {
+          "itemId": 2603,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Dining Out",
+            "Dining_Out_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Adult Day Program Expenses": {
+          "itemId": 2597,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Adult Day Programs",
+            "Adult_Day_Programs_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Personal Support & Trusted Contacts",
+      "domains": [
+        "Support Network"
+      ],
+      "signals": {
+        "Has Mechanic/Dealership Contact": {
+          "itemId": 2541,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Mechanic/Dealership"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Work Contact on File": {
+          "itemId": 2545,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Work Contact"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Secondary Trusted Contact": {
+          "itemId": 2548,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Secondary trusted contact"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Primary Trusted Contact": {
+          "itemId": 2547,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Primary trusted contact"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Clergy/Spiritual Advisor Contact": {
+          "itemId": 2527,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Clergy/Spiritual Advisor"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Other Important Contacts": {
+          "sources": [
+            {
+              "itemId": 34,
+              "entity": "Autos",
+              "attributes": [
+                "Other Important Contacts"
+              ],
+              "storyId": 3
+            },
+            {
+              "itemId": 2542,
+              "entity": "Care Receivers",
+              "attributes": [
+                "Other Important Contacts"
+              ],
+              "storyId": 80
+            }
+          ],
+          "dependencyScope": "multi_source"
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Pet-Related Contacts",
+      "domains": [
+        "Pets"
+      ],
+      "signals": {
+        "Has Vet on File": {
+          "itemId": 99,
+          "entity": "Pets",
+          "attributes": [
+            "Vet",
+            "Name",
+            "Phone"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Has Pet Sitter on File": {
+          "itemId": 98,
+          "entity": "Pets",
+          "attributes": [
+            "Pet Sitter",
+            "Name",
+            "Phone"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Has Pet Groomer on File": {
+          "itemId": 97,
+          "entity": "Pets",
+          "attributes": [
+            "Pet Groomer"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Has Other Pet Contacts": {
+          "itemId": 9,
+          "entity": "Pets",
+          "attributes": [
+            "Other Important Contacts"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Pet-Related Financial Obligations",
+      "domains": [
+        "Finance",
+        "Pets"
+      ],
+      "signals": {
+        "Recurring Pet Expenses": {
+          "itemId": 8,
+          "entity": "Pets",
+          "attributes": [
+            "Recurring Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 1
+        },
+        "Has Pet Boarding": {
+          "itemId": 96,
+          "entity": "Pets",
+          "attributes": [
+            "Boarding Information",
+            "Auto_pay",
+            "Instructions"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Pet Insurance Active": {
+          "itemId": 95,
+          "entity": "Pets",
+          "attributes": [
+            "Pet Insurance",
+            "Auto_pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Has Pet Trust": {
+          "itemId": 93,
+          "entity": "Pets",
+          "attributes": [
+            "Pet Trust",
+            "Attorney_reviewed",
+            "Up_to_date"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        },
+        "Has Recurring Pet Income": {
+          "itemId": 94,
+          "entity": "Pets",
+          "attributes": [
+            "Recurring Pet Income",
+            "Direct_Deposit"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Pet-Specific Legal & Ownership Records",
+      "domains": [
+        "Legal",
+        "Pets"
+      ],
+      "signals": {
+        "Has Other Pet Important Documents": {
+          "itemId": 5,
+          "entity": "Pets",
+          "attributes": [
+            "Other Important Documents",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 1
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Property & Housing Expenses",
+      "domains": [
+        "Finance",
+        "Housing"
+      ],
+      "signals": {
+        "Has Mortgage or Rent": {
+          "itemId": 76,
+          "entity": "Real Estate",
+          "attributes": [
+            "Mortgages or Rent",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has HOA Dues": {
+          "itemId": 78,
+          "entity": "Real Estate",
+          "attributes": [
+            "Homeowner's Association Dues",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Property Tax Auto Pay Enabled": {
+          "itemId": 201,
+          "entity": "Real Estate",
+          "attributes": [
+            "Property Tax",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Has Utility Expenses": {
+          "itemId": 23,
+          "entity": "Real Estate",
+          "attributes": [
+            "Utilities"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Real Estate & Property Records",
+      "domains": [
+        "Legal",
+        "Housing"
+      ],
+      "signals": {
+        "Has Auto Important Documents": {
+          "itemId": 30,
+          "entity": "Autos",
+          "attributes": [
+            "Important Documents",
+            "Location"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has Offsite Auto Storage": {
+          "itemId": 86,
+          "entity": "Autos",
+          "attributes": [
+            "Offsite Storage",
+            "Location_of_bills",
+            "Auto_Pay",
+            "Location_of_agreement"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has Certificate of Title": {
+          "itemId": 85,
+          "entity": "Autos",
+          "attributes": [
+            "Certificate of Title",
+            "In_Trust",
+            "Location",
+            "Joint",
+            "Names"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 3
+        },
+        "Has Property Deed": {
+          "itemId": 72,
+          "entity": "Real Estate",
+          "attributes": [
+            "Deed",
+            "In_Trust",
+            "Location",
+            "Ownership"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Sentimental & Personal Items",
+      "domains": [
+        "Legal"
+      ],
+      "signals": {
+        "Has Family Heirlooms": {
+          "itemId": 2660,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Family Heirlooms"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Daily Jewelry Documented": {
+          "itemId": 2685,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Daily Jewelry"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Wristwatch Documented": {
+          "itemId": 2655,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Wristwatch"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Photo Albums": {
+          "itemId": 2657,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Photo Albums"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Framed Photos": {
+          "itemId": 2658,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Framed Photos"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Letters & Cards": {
+          "itemId": 2659,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Letters & Cards"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Religious Items": {
+          "itemId": 2661,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Religious Items"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Awards & Certificates": {
+          "itemId": 2662,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Awards & Certificates"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Decorative Art": {
+          "itemId": 2670,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Decorative Art"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Social & Communication Accounts",
+      "domains": [
+        "Digital"
+      ],
+      "signals": {
+        "Has WhatsApp": {
+          "itemId": 2630,
+          "entity": "Care Receivers",
+          "attributes": [
+            "WhatsApp"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has LinkedIn": {
+          "itemId": 2628,
+          "entity": "Care Receivers",
+          "attributes": [
+            "LinkedIn"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Instagram": {
+          "itemId": 2627,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Instagram"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Facebook": {
+          "itemId": 2626,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Facebook"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Twitter/X": {
+          "itemId": 2629,
+          "entity": "Care Receivers",
+          "attributes": [
+            "TwitterX"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Messenger": {
+          "itemId": 2631,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Messenger"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Signal/Telegram": {
+          "itemId": 2632,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Signal Telegram"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Zoom": {
+          "itemId": 2633,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Zoom"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has FaceTime/Apple ID": {
+          "itemId": 2634,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Face Time Apple ID"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Technology & Digital Storage Devices",
+      "domains": [
+        "Digital"
+      ],
+      "signals": {
+        "Has External Hard Drives": {
+          "itemId": 2672,
+          "entity": "Care Receivers",
+          "attributes": [
+            "External Hard Drives"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has USB Flash Drives": {
+          "itemId": 2673,
+          "entity": "Care Receivers",
+          "attributes": [
+            "USB Flash Drives"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has SD Cards": {
+          "itemId": 2675,
+          "entity": "Care Receivers",
+          "attributes": [
+            "SD Cards"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Personal Computers": {
+          "itemId": 2678,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Personal Computers"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Personal Phones": {
+          "itemId": 2679,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Personal Phones"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        },
+        "Has Old Phones/Laptops": {
+          "itemId": 2674,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Old Phones / Laptops"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Transportation & Mobility",
+      "domains": [
+        "Health",
+        "Finance"
+      ],
+      "signals": {
+        "Monthly Taxi/Medical Transport Expenses": {
+          "itemId": 2600,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Taxi Medical Transport",
+            "Taxi_Medical_Transport_Expenses"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        },
+        "Monthly Rideshare Expenses": {
+          "itemId": 2599,
+          "entity": "Care Receivers",
+          "attributes": [
+            "Rideshare_Expenses",
+            "Rideshare"
+          ],
+          "dependencyScope": "repeating_collection",
+          "method": "sum",
+          "storyId": 80
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "Utilities",
+      "domains": [
+        "Finance",
+        "Housing"
+      ],
+      "signals": {
+        "Has Security System": {
+          "itemId": 167,
+          "entity": "Real Estate",
+          "attributes": [
+            "Security System",
+            "Provider",
+            "Auto_Pay"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Water Auto Pay Enabled": {
+          "itemId": 166,
+          "entity": "Real Estate",
+          "attributes": [
+            "Water",
+            "Auto_Pay",
+            "Provider"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Electric Auto Pay Enabled": {
+          "itemId": 171,
+          "entity": "Real Estate",
+          "attributes": [
+            "Electric",
+            "Auto_Pay",
+            "Provider"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Gas Auto Pay Enabled": {
+          "itemId": 170,
+          "entity": "Real Estate",
+          "attributes": [
+            "Gas",
+            "Auto_Pay",
+            "Provider"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Internet Auto Pay Enabled": {
+          "itemId": 169,
+          "entity": "Real Estate",
+          "attributes": [
+            "Internet",
+            "Auto_Pay",
+            "Provider"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        },
+        "Home Phone Auto Pay Enabled": {
+          "itemId": 168,
+          "entity": "Real Estate",
+          "attributes": [
+            "Home Phone",
+            "Auto_Pay",
+            "Provider"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 2
+        }
+      },
+      "level": "story"
+    },
+    {
+      "scope_name": "User Profile",
+      "domains": [
+        "Profile"
+      ],
+      "signals": {
+        "Age": {
+          "itemId": 68,
+          "entity": "Personal",
+          "attributes": [
+            "Date Of Birth"
+          ],
+          "dependencyScope": "single_document",
+          "method": "age",
+          "storyId": 5
+        },
+        "ZipCode": {
+          "itemId": 168,
+          "entity": "Personal",
+          "attributes": [
+            "Zip Code"
+          ],
+          "dependencyScope": "single_document",
+          "storyId": 5
+        },
+        "Total Care Receivers": {
+          "method": "entity_count",
+          "entity": "Care Receivers",
+          "storyId": 80
+        },
+        "Care Receivers": {
+          "method": "entity_breakdown",
+          "entity": "Care Receivers",
+          "storyId": 80
+        },
+        "Total Pets": {
+          "method": "entity_count",
+          "entity": "Pets",
+          "storyId": 1
+        },
+        "Pets": {
+          "method": "entity_breakdown",
+          "entity": "Pets",
+          "storyId": 1
+        },
+        "Total Autos": {
+          "method": "entity_count",
+          "entity": "Autos",
+          "storyId": 3
+        },
+        "Autos": {
+          "method": "entity_breakdown",
+          "entity": "Autos",
+          "storyId": 3
+        },
+        "Total Real Estate": {
+          "method": "entity_count",
+          "entity": "Real Estate",
+          "storyId": 2
+        },
+        "Real Estate": {
+          "method": "entity_breakdown",
+          "entity": "Real Estate",
+          "storyId": 2
+        }
+      },
+      "level": "user"
+    }
+  ]
+}

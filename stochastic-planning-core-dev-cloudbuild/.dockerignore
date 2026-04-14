@@ -1,0 +1,6 @@
+venv
+__pycache__
+*.cmd
+*_config.json
+*.sql
+logs

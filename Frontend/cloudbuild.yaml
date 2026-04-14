@@ -1,0 +1,48 @@
+steps:
+  # Step 0: Access .env from Secret Manager and write to file
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        gcloud secrets versions access latest --secret="${_ENV_SECRET}" > .env
+
+  # Step 1: Build the Docker image using root-level Dockerfile
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-t"
+      - "us-central1-docker.pkg.dev/${_PROJECT_ID}/admin-repo/web:latest"
+      - "-f"
+      - "./Dockerfile"
+      - "."
+
+  # Step 2: Push the image to Artifact Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "push"
+      - "us-central1-docker.pkg.dev/${_PROJECT_ID}/admin-repo/web:latest"
+
+  # Step 3: Deploy to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "gcloud"
+    args:
+      - "run"
+      - "deploy"
+      - "admin-panel"
+      - "--image"
+      - "us-central1-docker.pkg.dev/${_PROJECT_ID}/admin-repo/web:latest"
+      - "--region"
+      - "us-central1"
+      - "--platform"
+      - "managed"
+      - "--allow-unauthenticated"
+      - "--project"
+      - "${_PROJECT_ID}"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+images: 
+  - "us-central1-docker.pkg.dev/${_PROJECT_ID}/admin-repo/web:latest"
+ 

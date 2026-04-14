@@ -1,0 +1,13 @@
+# Updated requirements compatible with Python 3.13
+psycopg2-binary>=2.9.9
+pgvector==0.2.4
+sentence-transformers==2.2.2
+transformers>=4.30.0
+spacy
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
+python-dotenv==1.0.0
+numpy>=1.24.3
+pandas>=2.0.3
+requests==2.31.0
+huggingface-hub==0.16.4
+torch>=2.0.1

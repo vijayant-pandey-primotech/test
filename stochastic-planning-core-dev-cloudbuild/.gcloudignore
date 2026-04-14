@@ -1,0 +1,15 @@
+venv
+*/venv/
+**/venv/
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+*.cmd
+*_config.json
+*.sql
+.git
+.vscode
+*.log
+logs/
+*/logs/
+**/logs/
